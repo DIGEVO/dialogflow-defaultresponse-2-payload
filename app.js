@@ -71,10 +71,5 @@ function updateIntent(intent) {
 		body: intent
 	};
 
-	rp(options).then(data => {
-		console.log(JSON.stringify(data, undefined, 2));
-	}).catch(e => {
-		console.error(JSON.stringify(e));
-		console.error('------------------------ error');
-	});
+	rp(options).then(console.log).catch(console.error);
 }
